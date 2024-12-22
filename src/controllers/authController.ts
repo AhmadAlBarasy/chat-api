@@ -10,3 +10,10 @@ export const login = errorHandler(async (req: Request, res: Response, next: Next
     message: 'Successfully logged in.'
   });
 });
+
+export const signup = errorHandler(async (req: Request, res: Response, next: NextFunction) => {
+  res.status(200).json({
+    status: SUCCESS,
+    message: 'Done'
+  });
+});

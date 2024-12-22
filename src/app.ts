@@ -16,13 +16,13 @@ app.use(cookieParser());
 
 /* security middlewares */
 app.use(helmet());
-app.use(rateLimit({ // configure based on your needs
+app.use(rateLimit({
   windowMs: 60 * 1000,
   limit: 50,
 }));
 
 
-app.use('/api/v1', v1Router); // example router
+app.use('/api/v1', v1Router);
 
 app.all('*', notFoundEndpoint); // handle requests to endpoints that are not implemented
 
