@@ -2,12 +2,14 @@
 
 import { Router } from 'express';
 import { notAllowedMethod, notFoundEndpoint } from '../../middlewares/notAllowedHandler';
-import { login } from '../../controllers/authController';
+import { signup } from '../../controllers/authController';
 
 const authRouter = Router();
 
-authRouter.route('/login')
-  .post(login)
+authRouter.route('/signup')
+  .post(
+    signup
+  )
   .all(notAllowedMethod);
 
 authRouter.route('*').all(notFoundEndpoint);
