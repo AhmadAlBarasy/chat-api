@@ -70,27 +70,3 @@ export {
   Media,
   sequelize,
 };
-
-// export const syncModels = async () => {
-//   try {
-//     await Promise.all([
-//       Media.sync(),
-//       Friendship.sync(),
-//       User.sync(),
-//       Message.sync(),
-//       Conversation.sync(),
-//       Participation.sync(),
-//     ]);
-//     logger.info('All models were synchronized successfully.');
-//   } catch (error: any) {
-//     throw error;
-//   }
-//};
-
-// export const syncAssociations = async () => {
-//   try {
-//   }
-//   catch (error: any){
-//     logger.error('Error syncing associations: ', error.message);
-//   }
-// };
